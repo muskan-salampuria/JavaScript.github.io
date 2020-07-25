@@ -10,5 +10,5 @@
   5. It validates all the data entered by user.
   
 # Preview
-  Login Page: 
-  Registration Page: 
+ * Login Page: https://muskan-salampuria.github.io/Muskan_Salampuria_JavaScript.github.io/Login.html
+ * Registration Page: https://muskan-salampuria.github.io/Muskan_Salampuria_JavaScript.github.io/Register.html
