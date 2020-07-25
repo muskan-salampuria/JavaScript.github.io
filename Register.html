@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+    <div class="bgimg">
+        <h2>Register!</h2>
+        <a class="back" href="Login.html" class="register">Back</a>
+        <br>
+        <form action="Successfull.html" onsubmit="return validation()" class="bg-light">
+            <div>
+                <input type="text" name="" class="inputbox" placeholder="Username" id="user" autocomplete="off">
+                <span id="username" class="text-danger" style="color:yellow"> </span>
+            </div>
+            <br>
+            <div>
+                <input type="password" name="" class="inputbox" placeholder="Password" id="password"autocomplete="off">
+                <span id="passwords" class="text-danger font-weight-bold" style="color:yellow"> </span>
+            </div>
+            <br>
+            <div>
+                <input type="password" name="" class="inputbox" placeholder="Confirm Password" id="cpassword" autocomplete="off">
+                <span id="cpasswords" class="text-danger font-weight-bold" style="color:yellow"> </span>
+            </div>
+            <br>
+            <div>
+                <input type="text" name="" class="inputbox" placeholder="Mobile Number" id="mobile" autocomplete="off">
+                <span id="mobilen" class="text-danger font-weight-bold" style="color:yellow"> </span>
+            </div>
+            <br>
+            <div>
+                <input type="text" name="" class="inputbox" placeholder="Email" id="emails" autocomplete="off">
+                <span id="mails" class="text-danger font-weight-bold" style="color:yellow"> </span>
+            </div>
+            <br>
+            <div>
+                <button class="ok" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function validation(){
+                var user = document.getElementById('user').value;
+                var password = document.getElementById('password').value;
+                var cpassword = document.getElementById('cpassword').value;
+                var mobile = document.getElementById('mobile').value;
+                var emails = document.getElementById('emails').value;
+
+                if(user == ""){
+                    document.getElementById('username').innerHTML = " **Please fill username";
+                    return false;
+                }
+                if(user.length <= 2 || user.length > 20){
+                    document.getElementById('username').innerHTML = " *Username must be between 2-20 chars";
+                    return false;
+                }
+                if(!isNaN(user)){
+                    document.getElementById('username').innerHTML = " *Username must contain some characters";
+                    return false;
+                }
+                if((user != "") && (user.length > 2 || user.length < 20) && isNaN(user)){
+                    document.getElementById('username').innerHTML = "";
+                }
+
+                if(password == ""){
+                    document.getElementById('passwords').innerHTML = " **Please fill password";
+                    return false;
+                }
+                if(password.length <= 7 || password.length > 20){
+                    document.getElementById('passwords').innerHTML = " *Password must be between 8-20 chars";
+                    return false;
+                }
+                if((password.length > 8) && (password.length <= 20)){
+                    document.getElementById('passwords').innerHTML = "";
+                }
+
+                if(cpassword == ""){
+                    document.getElementById('cpasswords').innerHTML = " **Please fill this field";
+                    return false;
+                }
+                if(password!=cpassword){
+                    document.getElementById('cpasswords').innerHTML = " *Password does not match";
+                    return false;
+                }
+                if(password==cpassword){
+                    document.getElementById('cpasswords').innerHTML = "";
+                }
+
+                if(mobile == ""){
+                    document.getElementById('mobilen').innerHTML = " **Please fill Mobile Number";
+                    return false;
+                }
+                if(isNaN(mobile)){
+                    document.getElementById('mobilen').innerHTML = " *Enter a valid Mobile Number";
+                    return false;
+                }
+                if(mobile.length!=10){
+                    document.getElementById('mobilen').innerHTML = " *Enter a valid 10 digits Mobile Number";
+                    return false;
+                }
+                if((mobile.length == 10) && (!isNaN(mobile))){
+                    document.getElementById('mobilen').innerHTML = "";
+                }
+
+                if(emails == ""){
+                    document.getElementById('mails').innerHTML = " **Please fill Email Id";
+                    return false;
+                }
+                if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')) {
+                    document.getElementById('mails').innerHTML = " **Enter a valid Email Id";
+                    return false;
+                }
+                if(emails.indexOf('@') <= 0){
+                    document.getElementById('mails').innerHTML = " *Enter a valid Email Id";
+                    return false;
+                }
+        }
+    </script>
+</body>
+</html>

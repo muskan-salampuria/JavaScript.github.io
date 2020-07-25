@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div class="bgimg">
+    <div class="centerdiv">
+        <h2>Sign in</h2>
+        <a href="#" class="close">X</a>
+        <br>
+        <form action="Successfull.html" onsubmit="return validation()" class="bg-light">
+            <div>
+                <input type="text" name="" class="inputbox" placeholder="mail@example.com" id="user" autocomplete="off">
+                <span id="username" class="text-danger" style="color:red" font="small">   </span>
+            </div>
+            <div>
+                <input type="Password" name="" class="inputbox" placeholder="password" id="password" autocomplete="off">
+                <span id="passwords" class="text-danger" style="color:red">   </span>
+            </div>
+            <br>
+            <div>
+                <button class="ok" type="submit">Sign in</button>
+            </div>
+        </form>
+        <div class="container">
+            <a class="forget" href="#" class="forget">Forgot your Password?</a>
+            <a class="register" href="Register.html" class="register">Register!</a>
+        </div>
+        <br>
+        <div class="content">
+            <p class="or">OR</p>
+        </div>
+        <br>
+        <div>
+            <button class="f" type="submit">f</button>
+        </div>
+        <br>
+        <div>
+            <button class="g" type="submit">g</button>
+        </div>
+        <br>
+        <br>
+        <div>
+            <button class="epam" type="submit">&lt; EPAM LOGIN &gt</button>
+        </div>
+
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        function validation(){
+                var user = document.getElementById('user').value;
+                var password = document.getElementById('password').value;
+
+                if(user == ""){
+                    document.getElementById('username').innerHTML = " **Please fill username field";
+                    return false;
+                }
+                if((user.charAt(user.length-4)!='.') && (user.charAt(user.length-3)!='.')) {
+                    document.getElementById('username').innerHTML = " **Enter a valid Email Id";
+                    return false;
+                }
+                if(user.indexOf('@') <= 0){
+                    document.getElementById('username').innerHTML = " *Enter a valid Email Id";
+                    return false;
+                }
+                if((user != "") && (user.charAt(user.length-4)=='.') || (user.charAt(user.length-3)=='.') && (user.indexOf('@') > 0)){
+                    document.getElementById('username').innerHTML = "";
+                }
+
+                if(password == ""){
+                    document.getElementById('passwords').innerHTML = " **Please fill password field";
+                    return false;
+                }
+                if(password.length <= 7 || password.length > 20){
+                    document.getElementById('passwords').innerHTML = " *Invalid Password";
+                    return false;
+                }
+        }
+    </script>
+
+
+</body>
+</html>

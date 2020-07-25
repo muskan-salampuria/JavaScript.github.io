@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bgimg{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(27deg, #004E95 50%, #013A68 50%);
+}
+.centerdiv{
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white ;
+    transform: translate(-50%, -50%);
+    box-shadow: 0*1px*6px*rgba(0,0,0,0.12), 0*1px*4px*rgba(0,0,0,0.24)
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    line-height: 60px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+    background-color: rgb(30, 184, 255);
+}
+.content{
+    margin: 10px auto;
+    width: 350px;
+    color: slategray;
+}
+.or{
+    text-align: center;
+    font-size: 20px;
+    background-image: linear-gradient(slategray,slategray),linear-gradient(slategray,slategray);
+    background-size: 43% 1px;
+    background-position: center left,center right;
+    background-repeat: no-repeat;
+}
+.close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+    color: white
+}
+.inputbox{
+    width: calc(100% - 40px);
+    height: 40px;
+    display: block;
+    margin: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: thin;
+}
+.ok{
+    width: calc(100% - 40px);
+    font-size: medium;
+    height: 40px;
+    display: block;
+    margin: auto;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.f{
+    width: calc(100% - 40px);
+    font-size: x-large;
+    height: 40px;
+    display: block;
+    margin: auto;
+    color: white;
+    background-color: rgb(5, 5, 196);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.g{
+    width: calc(100% - 40px);
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 40px;
+    display: block;
+    margin: auto;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.epam{
+    width: calc(100% - 40px);
+    font-size: medium;
+    height: 40px;
+    display: block;
+    margin: auto;
+    color: white;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.forget{ 
+    color: black;
+    font-size: small;
+    margin-left: 25px;
+}
+.register{ 
+    color: black;
+    font-size: small;
+    margin-left: 150px;
+}
+span{
+    height: 10px;
+    font-size: small;
+    margin-left: 8%;
+}
+@media (min-width: 1200px){
+  
+}
+@media (max-width: 990px){
+    .centerdiv{
+        width: 400px;
+    }
+    .register{ 
+        margin-left: 150px;
+    }
+}
+@media (max-width: 800px){
+    .centerdiv{
+        width: 400px;
+    }
+    
+}
+@media (max-width: 600px){
+    .centerdiv{
+        width: 400px;
+    }
+}
+@media (max-width: 480px){
+    .centerdiv{
+        width: 400px;
+    }
+}
+@media (max-width: 410px){
+    .centerdiv{
+        width: 95%;
+    }
+    .register{ 
+        margin-left: 10%;
+    }
+    .forget{
+        margin-left: 10%;
+    }
+    .content{
+        width: 80%;
+    }
+    .or{
+        font-size: larger;
+        background-size: 38% 1px;
+    }
+    .close{
+        right:-5%;
+        top: 1%;
+    }
+}
